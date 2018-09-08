@@ -1,1 +1,1 @@
-print("Hello, world!");
+Какой то текст
