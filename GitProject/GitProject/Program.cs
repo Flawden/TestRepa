@@ -27,7 +27,7 @@ namespace GitProject
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Drow();
 
-            FoodCreator foodCreator = new FoodCreator(78, 22, '$');
+            FoodCreator foodCreator = new FoodCreator(78, 25, '@');
             Point food = foodCreator.CreateFood();
             food.Draw();
 
@@ -47,7 +47,7 @@ namespace GitProject
 
                 if (Console.KeyAvailable)
                 {
-                    ConsoleKeyInfo key = Console.ReadKey();
+                    ConsoleKeyInfo key = Console.ReadKey(true);
                     snake.Handler(key.Key);
                 }
                 Thread.Sleep(100);
