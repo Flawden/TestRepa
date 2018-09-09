@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace GitProject
@@ -10,26 +11,57 @@ namespace GitProject
     {
         static void Main(string[] args)
         {
-            int x1 = 1;
-            int y1 = 3;
-            char sym1 = '*';
 
-            Draw(x1, y1, sym1);
+            //Отрисовка линии
+            HorizontalLine xlineUp = new HorizontalLine(0, 78, 0, '*');
+            HorizontalLine xlineDown = new HorizontalLine(0, 78, 24, '*');
+            VerticalLine ylineLeft = new VerticalLine(0, 24, 0, '*');
+            VerticalLine ylineRight = new VerticalLine(0, 24, 78, '*');
+            xlineUp.Drow();
+            xlineDown.Drow();
+            ylineLeft.Drow();
+            ylineRight.Drow();
 
-            int x2 = 4;
-            int y2 = 5;
-            char sym2 = '#';
+            //Отрисовка точек
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Drow();
 
-            Draw(x2, y2, sym2);
+            FoodCreator foodCreator = new FoodCreator(78, 25, '@');
+            Point food = foodCreator.CreateFood();
+            food.Draw();
+
+            while(true)
+            {
+                if (snake.Eat(food))
+                {
+                    food = foodCreator.CreateFood();
+                    food.Draw();
+                }
+                else
+                {
+                    snake.Move();
+                }
+
+                Thread.Sleep(100);
+
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    snake.Handler(key.Key);
+                }
+                Thread.Sleep(100);
+                snake.Move();
+            }
+
+            
+               
+            
 
 
-            Console.ReadKey();
+
         }
 
-        static void Draw(int x, int y, char sym)
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+      
     }
 }
