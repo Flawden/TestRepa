@@ -37,7 +37,7 @@ namespace GitProject
                 x = x - offset;
             }
 
-            if (direction == Direction.DOWN)
+            else if (direction == Direction.DOWN)
             {
                 y = y - offset;
             }
@@ -51,6 +51,12 @@ namespace GitProject
         {
             Console.SetCursorPosition(x, y);
             Console.Write(sym);
+        }
+
+        public void Clear()
+        {
+            sym = ' ';
+            Draw();
         }
     }
 
