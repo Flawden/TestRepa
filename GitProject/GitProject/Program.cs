@@ -16,21 +16,15 @@ namespace GitProject
             p1.Draw();
             p2.Draw();
 
-            List<int> numList = new List<int>();
-            numList.Add(0);
-            numList.Add(1);
-            numList.Add(2);
-
-            foreach(int i in numList)
-            {
-                Console.WriteLine(i);
-            }
-
-            numList.RemoveAt(0);
-
-            List<Point> pList = new List<Point>();
-            pList.Add(p1);
-            pList.Add(p2);
+            HorizontalLine xlineUp = new HorizontalLine(1, 100, 0, '-');
+            HorizontalLine xlineDown = new HorizontalLine(1, 100, 35, '-');
+            VerticalLine ylineLeft = new VerticalLine(0, 35, 0, '+');
+            VerticalLine ylineRight = new VerticalLine(0, 35, 100, '+');
+            xlineUp.Drow();
+            xlineDown.Drow();
+            ylineLeft.Drow();
+            ylineRight.Drow();
+            
 
             Console.ReadKey();
         }
