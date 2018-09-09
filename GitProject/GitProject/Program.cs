@@ -16,10 +16,10 @@ namespace GitProject
             p1.Draw();
             p2.Draw();
 
-            HorizontalLine xlineUp = new HorizontalLine(1, 100, 0, '-');
-            HorizontalLine xlineDown = new HorizontalLine(1, 100, 35, '-');
-            VerticalLine ylineLeft = new VerticalLine(0, 35, 0, '+');
-            VerticalLine ylineRight = new VerticalLine(0, 35, 100, '+');
+            HorizontalLine xlineUp = new HorizontalLine(1, 100, 0, '*');
+            HorizontalLine xlineDown = new HorizontalLine(1, 100, 35, '*');
+            VerticalLine ylineLeft = new VerticalLine(0, 35, 0, '*');
+            VerticalLine ylineRight = new VerticalLine(0, 35, 100, '*');
             xlineUp.Drow();
             xlineDown.Drow();
             ylineLeft.Drow();
