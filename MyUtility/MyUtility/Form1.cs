@@ -24,6 +24,7 @@ namespace MyUtility
         {
             InitializeComponent();
             LoadNotepaad();
+            CLGen.SetItemChecked(0, true);
         }
 
         private void Minus_Click(object sender, EventArgs e)

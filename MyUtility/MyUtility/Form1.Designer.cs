@@ -567,7 +567,7 @@
             this.NumGen.Size = new System.Drawing.Size(55, 20);
             this.NumGen.TabIndex = 1;
             this.NumGen.Value = new decimal(new int[] {
-            1,
+            7,
             0,
             0,
             0});
