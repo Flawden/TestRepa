@@ -17,6 +17,8 @@ namespace MyUtility
         Random rnd = new Random();
         int countb = 0;
         int countGen = 0;
+        char[] SC = new char[] { '_', ':', '#', '@', '*' };
+        string pass;
 
         public Form1()
         {
@@ -239,7 +241,7 @@ namespace MyUtility
 
         private void KeyGen_Click(object sender, EventArgs e)
         {
-           if (CLGen.CheckedItems.Count == 0) { return; }
+            if (CLGen.CheckedItems.Count == 0) { return; }
             string password = "";
             for (int i = 0; i < NumGen.Value; i++)
             {
@@ -247,12 +249,34 @@ namespace MyUtility
                 string s = CLGen.CheckedItems[countGen].ToString();
                 switch (s)
                 {
-                    case "Цифры": password += rnd.Next(0, 9);
+                    case "Цифры":
+                        password += rnd.Next(0, 9);
                         break;
-                    case "Прописные буквы": 
+                    case "Прописные буквы":
+                        password += Convert.ToChar(rnd.Next(65, 88));
+                        break;
+                    case "Строчные буквы(заглавные)":
+                        password += Convert.ToChar(rnd.Next(97, 122));
+                        break;
+                    default:
+                        password += SC[rnd.Next(0, SC.Length)];
                         break;
                 }
+                        pass = password;
+                        textBoxGen.Text = password;
+                }
             }
+        private void CLGen_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Clipboard.SetText(pass);
         }
     }
-}
+
+       
+    }
+

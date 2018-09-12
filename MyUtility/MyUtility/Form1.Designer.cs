@@ -71,6 +71,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.NumGen = new System.Windows.Forms.NumericUpDown();
             this.CLGen = new System.Windows.Forms.CheckedListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.PassGen.SuspendLayout();
             this.Count.SuspendLayout();
@@ -184,7 +186,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -513,6 +515,8 @@
             // PasswordGen
             // 
             this.PasswordGen.BackColor = System.Drawing.Color.White;
+            this.PasswordGen.Controls.Add(this.button3);
+            this.PasswordGen.Controls.Add(this.label7);
             this.PasswordGen.Controls.Add(this.textBoxGen);
             this.PasswordGen.Controls.Add(this.KeyGen);
             this.PasswordGen.Controls.Add(this.label6);
@@ -527,7 +531,7 @@
             // 
             // textBoxGen
             // 
-            this.textBoxGen.Location = new System.Drawing.Point(21, 192);
+            this.textBoxGen.Location = new System.Drawing.Point(21, 204);
             this.textBoxGen.Name = "textBoxGen";
             this.textBoxGen.Size = new System.Drawing.Size(319, 20);
             this.textBoxGen.TabIndex = 4;
@@ -581,6 +585,27 @@
             this.CLGen.Name = "CLGen";
             this.CLGen.Size = new System.Drawing.Size(173, 64);
             this.CLGen.TabIndex = 0;
+            this.CLGen.SelectedIndexChanged += new System.EventHandler(this.CLGen_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.label7.Location = new System.Drawing.Point(123, 166);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(142, 26);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Ваш пароль:";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(265, 144);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Копировать";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Form1
             // 
@@ -656,6 +681,8 @@
         private System.Windows.Forms.Button KeyGen;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown NumGen;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
     }
 }
 
