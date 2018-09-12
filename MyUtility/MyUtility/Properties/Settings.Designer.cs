@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Utility.Properties
+namespace MyUtility.Properties
 {
 
 
