@@ -235,5 +235,10 @@ namespace MyUtility
         {
             LoadNotepaad();
         }
+
+        private void KeyGen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

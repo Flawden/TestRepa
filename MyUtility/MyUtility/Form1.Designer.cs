@@ -66,11 +66,11 @@
             this.Notepad = new System.Windows.Forms.TabPage();
             this.Notepaad = new System.Windows.Forms.RichTextBox();
             this.PasswordGen = new System.Windows.Forms.TabPage();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.NumGen = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.KeyGen = new System.Windows.Forms.Button();
             this.textBoxGen = new System.Windows.Forms.TextBox();
+            this.KeyGen = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.NumGen = new System.Windows.Forms.NumericUpDown();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1.SuspendLayout();
             this.PassGen.SuspendLayout();
             this.Count.SuspendLayout();
@@ -107,7 +107,7 @@
             this.Exit.Name = "Exit";
             this.Exit.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.F4)));
-            this.Exit.Size = new System.Drawing.Size(180, 22);
+            this.Exit.Size = new System.Drawing.Size(177, 22);
             this.Exit.Text = "Выход";
             this.Exit.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -184,7 +184,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -524,19 +524,31 @@
             this.PasswordGen.Text = "Генератор пароля";
             this.PasswordGen.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // textBoxGen
             // 
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
-            "Цифры",
-            "Прописные буквы",
-            "Строчные буквы(заглавные)",
-            "Спецсимволы: _ ; # @ *"});
-            this.checkedListBox1.Location = new System.Drawing.Point(21, 28);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(173, 64);
-            this.checkedListBox1.TabIndex = 0;
+            this.textBoxGen.Location = new System.Drawing.Point(21, 192);
+            this.textBoxGen.Name = "textBoxGen";
+            this.textBoxGen.Size = new System.Drawing.Size(319, 20);
+            this.textBoxGen.TabIndex = 4;
+            // 
+            // KeyGen
+            // 
+            this.KeyGen.Location = new System.Drawing.Point(21, 144);
+            this.KeyGen.Name = "KeyGen";
+            this.KeyGen.Size = new System.Drawing.Size(75, 23);
+            this.KeyGen.TabIndex = 3;
+            this.KeyGen.Text = "Создать пароль";
+            this.KeyGen.UseVisualStyleBackColor = true;
+            this.KeyGen.Click += new System.EventHandler(this.KeyGen_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(18, 115);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Длина пароля";
             // 
             // NumGen
             // 
@@ -555,30 +567,19 @@
             0,
             0});
             // 
-            // label6
+            // checkedListBox1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 115);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Длина пароля";
-            // 
-            // KeyGen
-            // 
-            this.KeyGen.Location = new System.Drawing.Point(21, 144);
-            this.KeyGen.Name = "KeyGen";
-            this.KeyGen.Size = new System.Drawing.Size(75, 23);
-            this.KeyGen.TabIndex = 3;
-            this.KeyGen.Text = "Создать пароль";
-            this.KeyGen.UseVisualStyleBackColor = true;
-            // 
-            // textBoxGen
-            // 
-            this.textBoxGen.Location = new System.Drawing.Point(21, 192);
-            this.textBoxGen.Name = "textBoxGen";
-            this.textBoxGen.Size = new System.Drawing.Size(319, 20);
-            this.textBoxGen.TabIndex = 4;
+            this.checkedListBox1.CheckOnClick = true;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Цифры",
+            "Прописные буквы",
+            "Строчные буквы(заглавные)",
+            "Спецсимволы: _ ; # @ *"});
+            this.checkedListBox1.Location = new System.Drawing.Point(21, 28);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(173, 64);
+            this.checkedListBox1.TabIndex = 0;
             // 
             // Form1
             // 
