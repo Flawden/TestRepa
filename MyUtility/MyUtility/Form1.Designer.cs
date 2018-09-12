@@ -70,7 +70,7 @@
             this.KeyGen = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.NumGen = new System.Windows.Forms.NumericUpDown();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.CLGen = new System.Windows.Forms.CheckedListBox();
             this.menuStrip1.SuspendLayout();
             this.PassGen.SuspendLayout();
             this.Count.SuspendLayout();
@@ -184,7 +184,7 @@
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
@@ -194,6 +194,7 @@
             this.PassGen.Controls.Add(this.RandomPage);
             this.PassGen.Controls.Add(this.Notepad);
             this.PassGen.Controls.Add(this.PasswordGen);
+            this.PassGen.Cursor = System.Windows.Forms.Cursors.Default;
             this.PassGen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PassGen.Location = new System.Drawing.Point(0, 24);
             this.PassGen.Multiline = true;
@@ -248,7 +249,7 @@
             this.Delenie.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Delenie.Size = new System.Drawing.Size(29, 28);
             this.Delenie.TabIndex = 5;
-            this.Delenie.Text = "-";
+            this.Delenie.Text = "/";
             this.Delenie.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.Delenie.UseVisualStyleBackColor = true;
             this.Delenie.Click += new System.EventHandler(this.Delenie_Click);
@@ -511,18 +512,18 @@
             // 
             // PasswordGen
             // 
+            this.PasswordGen.BackColor = System.Drawing.Color.White;
             this.PasswordGen.Controls.Add(this.textBoxGen);
             this.PasswordGen.Controls.Add(this.KeyGen);
             this.PasswordGen.Controls.Add(this.label6);
             this.PasswordGen.Controls.Add(this.NumGen);
-            this.PasswordGen.Controls.Add(this.checkedListBox1);
+            this.PasswordGen.Controls.Add(this.CLGen);
             this.PasswordGen.Location = new System.Drawing.Point(4, 22);
             this.PasswordGen.Name = "PasswordGen";
             this.PasswordGen.Padding = new System.Windows.Forms.Padding(3);
             this.PasswordGen.Size = new System.Drawing.Size(377, 245);
             this.PasswordGen.TabIndex = 3;
             this.PasswordGen.Text = "Генератор пароля";
-            this.PasswordGen.UseVisualStyleBackColor = true;
             // 
             // textBoxGen
             // 
@@ -567,19 +568,19 @@
             0,
             0});
             // 
-            // checkedListBox1
+            // CLGen
             // 
-            this.checkedListBox1.CheckOnClick = true;
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Items.AddRange(new object[] {
+            this.CLGen.CheckOnClick = true;
+            this.CLGen.FormattingEnabled = true;
+            this.CLGen.Items.AddRange(new object[] {
             "Цифры",
             "Прописные буквы",
             "Строчные буквы(заглавные)",
             "Спецсимволы: _ ; # @ *"});
-            this.checkedListBox1.Location = new System.Drawing.Point(21, 28);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(173, 64);
-            this.checkedListBox1.TabIndex = 0;
+            this.CLGen.Location = new System.Drawing.Point(21, 28);
+            this.CLGen.Name = "CLGen";
+            this.CLGen.Size = new System.Drawing.Size(173, 64);
+            this.CLGen.TabIndex = 0;
             // 
             // Form1
             // 
@@ -650,7 +651,7 @@
         private System.Windows.Forms.ToolStripMenuItem Save;
         private System.Windows.Forms.ToolStripMenuItem Lod;
         private System.Windows.Forms.TabPage PasswordGen;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox CLGen;
         private System.Windows.Forms.TextBox textBoxGen;
         private System.Windows.Forms.Button KeyGen;
         private System.Windows.Forms.Label label6;

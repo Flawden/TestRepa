@@ -16,6 +16,7 @@ namespace MyUtility
         int forRandom = 0;
         Random rnd = new Random();
         int countb = 0;
+        int countGen = 0;
 
         public Form1()
         {
@@ -66,7 +67,7 @@ namespace MyUtility
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Программа содержит полезные для жизни утилиты, но главное призвана помочь мне изучить C#. \n\nАвтор: Snelk.");
+            MessageBox.Show("Программа содержит полезные для жизни утилиты, но главное призвана помочь мне изучить C#. \n\nАвтор: Snelk.", "О программе");
         }
 
         private void Counter_Click_1(object sender, EventArgs e)
@@ -238,7 +239,20 @@ namespace MyUtility
 
         private void KeyGen_Click(object sender, EventArgs e)
         {
-
+           if (CLGen.CheckedItems.Count == 0) { return; }
+            string password = "";
+            for (int i = 0; i < NumGen.Value; i++)
+            {
+                countGen = rnd.Next(0, CLGen.CheckedItems.Count);
+                string s = CLGen.CheckedItems[countGen].ToString();
+                switch (s)
+                {
+                    case "Цифры": password += rnd.Next(0, 9);
+                        break;
+                    case "Прописные буквы": 
+                        break;
+                }
+            }
         }
     }
 }
